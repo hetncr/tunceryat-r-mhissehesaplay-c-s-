@@ -355,13 +355,15 @@ if hisse_adi:
       st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
   #elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
     #st.write(f"ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT: {odenmis_hedef_fiyat:,.2f}")
-      st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+      #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+      
   elif operation == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
     #if c10 != 0:
     ozsermaye_hf = (c7/c8)*10/c11*c3
     st.write(f":blue[ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT]: {ozsermaye_hf:,.2f}")
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+    #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+  
   elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
     c21 = (c7*7)+(c8*0.5)
     potansiyel_fiyat = c21/c4
@@ -388,7 +390,7 @@ if hisse_adi:
     st.write(f":blue[**ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:**] {odenmis_hedef_fiyat:,.2f}")
     st.write(f":blue[**ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT**]: {ozsermaye_hf:,.2f}")
     st.write(f":chart:**:blue[TÜM HESAPLAMALARIN ORTALAMA FİYATI:]** {ortalama_hesap:,.2f}")
-    st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+    #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
 
 
 else:
