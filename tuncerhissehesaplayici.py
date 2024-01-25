@@ -328,8 +328,8 @@ if hisse_adi:
   operation = st.selectbox("İşlem Seçimi:", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
-    st.write(f"İŞLEM SEÇİN")
-    st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
+    st.write(f"LÜTFEN YUKARIDAKİ ALANA VERİLERİ GİRİP İŞLEM SEÇİN")
+    #st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
 
   elif operation == "F/K HEDEF FİYAT":
     if c10 != 0:      fk_hedef_fiyat = c3 / c10 * c12
