@@ -334,11 +334,12 @@ if hisse_adi:
 
   #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
 
-  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)
-  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
   st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
   st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
-
+  
+  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+  st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
     # Özsermaye
   c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
@@ -352,7 +353,8 @@ if hisse_adi:
     # Gelecek Özkaynak Tahmini Miktarı
   # Gelecek Özkaynak Tahmini Miktarı
   c22 = st.number_input(f"**Geçmiş Dönem Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın")
-  islem_1 = st.selectbox("Gelecek Özkaynak Tahmini Miktarı:", ["Gelecek Özkaynak Tahmini Miktarı"])
+  c24 = st.number_input(f"**Gelecek Net Kar Tahmini Miktarı:**", value=None, placeholder="Geçmiş Dönem Net Kar tutarını bu alana yazın")
+  islem_1 = st.selectbox("Gelecek Özkaynak ve Net Kar Tahmini Miktarı:", ["Gelecek Özkaynak Tahmini Miktarı", " Gelecek Net Kar Tahmini Miktarı"])
 
   if islem_1 == "Gelecek Özkaynak Tahmini Miktarı":
       # Ensure both c8 and c22 have valid numerical values before calculation
@@ -361,6 +363,16 @@ if hisse_adi:
           st.write(f"**Gelecek Özkaynak Tahmini Miktarı:** {c25}")
       else:
           st.write("Hesaplama için Özkaynaklar (Özsermaye) ve Geçmiş Dönem Özkaynaklar tutarlarını giriniz.")
+  else:
+      st.write("Hesaplama Yapılamadı")
+
+  if islem_1 == " Gelecek Net Kar Tahmini Miktarı":
+      # Ensure both c8 and c22 have valid numerical values before calculation
+      if c7 is not None and c24 is not None:
+          c26 = c7 + (c7 - c24)  # Calculate the future equity amount
+          st.write(f"**Gelecek Özkaynak Tahmini Miktarı:** {c26}")
+      else:
+          st.write("Hesaplama için Güncel Net Kar ve Geçmiş Dönem Net Kar tutarlarını giriniz.")
   else:
       st.write("Hesaplama Yapılamadı")
     
