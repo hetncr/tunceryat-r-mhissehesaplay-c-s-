@@ -440,9 +440,9 @@ if hisse_adi:
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
    
 
-#else:
-  #st.write(":arrow_up:","Lütfen Yukarıdaki Alana Hisse Yazınız",":arrow_up:")
-  #st.write(":red[(Not: Bankalar İşleme Dahil Değildir)]")
+else:
+  st.write(":arrow_up:","Lütfen Yukarıdaki Alana Hisse Yazınız",":arrow_up:")
+  st.write(":red[(Not: Bankalar İşleme Dahil Değildir)]")
 
     #if __name__ == "__main__":
     #  st.run()
