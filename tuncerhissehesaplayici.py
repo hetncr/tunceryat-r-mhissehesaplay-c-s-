@@ -369,7 +369,7 @@ if hisse_adi:
       # Ensure both c7 and c24 have valid numerical values before calculation
       if c7 is not None and c24 is not None:
           c26 = c7 + (c7 - c24)  # Calculate the future equity amount
-          st.write(f"**Gelecek Özkaynak Tahmini Miktarı:** {c26}")
+          st.write(f"**Gelecek Net Kar Tahmini Miktarı:** {c26}")
       else:
           st.write("Hesaplama için Güncel Net Kar ve Geçmiş Dönem Net Kar tutarlarını giriniz.")
   else:
