@@ -10,8 +10,8 @@ import pandas as pd
 
 
 #streamlit.config.theme.base = "dark"
-st.title(":blue[TUNCER YATIRIMI]")
-st.subheader(f":blue[**HİSSE HESAPLAMA UYGULAMASI**]:", divider='rainbow')
+st.title(":blue[TUNCER YATIRIM]")
+st.subheader(f":blue[**HİSSE HESAPLAMA UYGULAMASI**]", divider='rainbow')
 #st.set_page_config(
 # page_title="Hisse Hedef Fiyat Hesaplayıcı",
 #  page_icon="https://example.com/icon.png",
