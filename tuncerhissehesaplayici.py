@@ -11,7 +11,7 @@ import pandas as pd
 
 #streamlit.config.theme.base = "dark"
 st.title(":blue[TUNCER YATIRIM]")
-st.subheader(":chart:HİSSE HESAPLAMA UYGULAMASI:chart:", divider='rainbow')
+st.subheader(":chart:""HİSSE HESAPLAMA UYGULAMASI:chart:", divider='rainbow')
 #st.set_page_config(
 # page_title="Hisse Hedef Fiyat Hesaplayıcı",
 #  page_icon="https://example.com/icon.png",
