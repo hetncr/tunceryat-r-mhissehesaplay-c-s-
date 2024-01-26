@@ -349,7 +349,7 @@ if hisse_adi:
   c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
 
     # Yıllık Net Kar
-  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
+  #c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
   with st.sidebar:
     # Gelecek Özkaynak Tahmini Miktarı
   # Gelecek Özkaynak Tahmini Miktarı
