@@ -378,68 +378,37 @@ if hisse_adi:
     st.subheader(f":blue[**Manuel Hisse Hesaplayıcı**]", divider="rainbow")
     st.write("Hisse Hedef Fiyat Hesaplayıcı")
 # Hisse Fiyatı
-    c3 = st.number_input("Hisse Fiyatı:" )
+    c3_1 = st.number_input("Hisse Fiyatı:" )
 # Hisse F/K Oranı
-    c10 = float(st.number_input("Hisse F/K Oranı:"))
+    c10_1 = float(st.number_input("Hisse F/K Oranı:"))
 # HİSSE PD/DD ORANI
-    c11 = st.number_input("Hisse PD/DD Oranı: ")
+    c11_1 = st.number_input("Hisse PD/DD Oranı: ")
 # BİST100 /SEKTÖR GÜNCEL F/K ORANI
-    c12 = st.number_input("BİST100 / Sektör Güncel F/K Oranı: ")
+    c12_1 = st.number_input("BİST100 / Sektör Güncel F/K Oranı: ")
 # BIST100 / Sektör Güncel P/D Oranı
-    c13 = float(st.number_input("BİST100 / Sektör Güncel PD/DD Oranı:"))
+    c13_1 = float(st.number_input("BİST100 / Sektör Güncel PD/DD Oranı:"))
 # Ödenmiş Sermaye
-    c4 = st.number_input("Ödenmiş Sermaye: ")
+    c4_1 = st.number_input("Ödenmiş Sermaye: ")
 # Yıllık Net Kar
-    c7 = st.number_input("Yıllık Net Kar: ")
+    c7_1 = st.number_input("Yıllık Net Kar: ")
 # Özsermaye
-    c8 = st.number_input("Özsermaye : ")
+    c8_1 = st.number_input("Özsermaye : ")
     operation_manuel = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN","TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
     if operation_manuel == "İŞLEM SEÇİN":
       st.write(f"İŞLEM SEÇİN")
-      st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
-    elif operation_manuel == "F/K HEDEF FİYAT":
-      if c10 != 0:
-        fk_hedef_fiyat = c3 / c10 * c12
-      else:
-        fk_hedef_fiyat = 0
-        st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
-        st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    elif operation_manuel == "PD/DD HEDEF FİYAT":
-      if c11 != 0:
-        pd_hedef_fiyat = c3 / c11 * c13
-      else:
-        pd_hedef_fiyat = 0
-        st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
-        st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    elif operation_manuel == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
-      if c4 != 0:
-        odenmis_hedef_fiyat = (c7 / c4) * c10
-      #else:
-        #odenmis_hedef_fiyat = 0
-        st.write(f":blue[ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:] {odenmis_hedef_fiyat:,.2f}")
-        st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    #elif operation_manuel == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
-    #st.write(f"ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT: {odenmis_hedef_fiyat:,.2f}")
-        st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
-    elif operation_manuel == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
-    #if c10 != 0:
-      ozsermaye_hf = (c7/c8)*10/c11*c3
-      st.write(f":blue[ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT]: {ozsermaye_hf:,.2f}")
-      st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-      st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
     elif operation_manuel == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
-      c21 = (c7*7)+(c8*0.5)
-      potansiyel_fiyat = c21/c4
+      c21_1 = (c7_1*7)+(c8_1*0.5)
+      potansiyel_fiyat = c21_1/c4_1
       st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat:,.2f}")
     #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   #operation = st.selectbox("[ORTALAMA HEDEF FİYAT]")
-      fk_hedef_fiyat = c3 / c10 * c12
-      pd_hedef_fiyat = c3 / c11 * c13
-      ozsermaye_hf = (c7/c8)*10/c11*c3
-      odenmis_hedef_fiyat = (c7 / c4) * c10
-      c21 = (c7*7)+(c8*0.5)
-      potansiyel_fiyat = c21/c4
+      fk_hedef_fiyat = c3_1 / c10_1 * c12_1
+      pd_hedef_fiyat = c3_1 / c11_1 * c13_1
+      ozsermaye_hf = (c7_1/c8_1)*10/c11_1*c3_1
+      odenmis_hedef_fiyat = (c7_1 / c4_1) * c10_1
+      c21 = (c7_1*7)+(c8_1*0.5)
+      potansiyel_fiyat = c21_1/c4_1
       ortalama_hesap = ( fk_hedef_fiyat + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
     #if operation == "ORTALAMA HEDEF FİYAT":
     #st.write(ortalama_hesap)
