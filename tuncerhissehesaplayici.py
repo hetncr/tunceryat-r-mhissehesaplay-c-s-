@@ -390,7 +390,7 @@ if hisse_adi:
 # Ödenmiş Sermaye
   c4 = st.number_input("Ödenmiş Sermaye: ")
 # Yıllık Net Kar
-   c7 = st.number_input("Yıllık Net Kar: ")
+  c7 = st.number_input("Yıllık Net Kar: ")
 # Özsermaye
   c8 = st.number_input("Özsermaye : ")
   operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
