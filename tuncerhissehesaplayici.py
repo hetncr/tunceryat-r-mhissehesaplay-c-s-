@@ -393,42 +393,42 @@ if hisse_adi:
     c7 = st.number_input("Yıllık Net Kar: ")
 # Özsermaye
     c8 = st.number_input("Özsermaye : ")
-    operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
+    operation_manuel = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
-    if operation == "İŞLEM SEÇİN":
+    if operation_manuel == "İŞLEM SEÇİN":
       st.write(f"İŞLEM SEÇİN")
       st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
-    elif operation == "F/K HEDEF FİYAT":
+    elif operation_manuel == "F/K HEDEF FİYAT":
       if c10 != 0:
         fk_hedef_fiyat = c3 / c10 * c12
       else:
         fk_hedef_fiyat = 0
         st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
         st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    elif operation == "PD/DD HEDEF FİYAT":
+    elif operation_manuel == "PD/DD HEDEF FİYAT":
       if c11 != 0:
         pd_hedef_fiyat = c3 / c11 * c13
       else:
         pd_hedef_fiyat = 0
         st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
         st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
+    elif operation_manuel == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
       if c4 != 0:
         odenmis_hedef_fiyat = (c7 / c4) * c10
       #else:
         #odenmis_hedef_fiyat = 0
         st.write(f":blue[ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:] {odenmis_hedef_fiyat:,.2f}")
         st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-    #elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
+    #elif operation_manuel == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
     #st.write(f"ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT: {odenmis_hedef_fiyat:,.2f}")
         st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
-    elif operation == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
+    elif operation_manuel == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
     #if c10 != 0:
       ozsermaye_hf = (c7/c8)*10/c11*c3
       st.write(f":blue[ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT]: {ozsermaye_hf:,.2f}")
       st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
       st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
-    elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
+    elif operation_manuel == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
       c21 = (c7*7)+(c8*0.5)
       potansiyel_fiyat = c21/c4
       st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat:,.2f}")
