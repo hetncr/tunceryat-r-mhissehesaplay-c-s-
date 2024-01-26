@@ -374,7 +374,7 @@ if hisse_adi:
             st.write("Hesaplama için Güncel Net Kar ve Geçmiş Dönem Net Kar tutarlarını giriniz.")
     else:
         st.write("Hesaplama Yapılamadı")
-
+  with sidebar:
     st.subheader(f":blue[**Manuel Hisse Hesaplayıcı**]", divider="rainbow")
     st.write("Hisse Hedef Fiyat Hesaplayıcı")
 # Hisse Fiyatı
