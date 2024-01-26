@@ -374,7 +374,7 @@ if hisse_adi:
             st.write("Hesaplama için Güncel Net Kar ve Geçmiş Dönem Net Kar tutarlarını giriniz.")
     else:
         st.write("Hesaplama Yapılamadı")
-  with sidebar:
+  #with sidebar:
     st.subheader(f":blue[**Manuel Hisse Hesaplayıcı**]", divider="rainbow")
     st.write("Hisse Hedef Fiyat Hesaplayıcı")
 # Hisse Fiyatı
@@ -393,7 +393,7 @@ if hisse_adi:
     c7 = st.number_input("Yıllık Net Kar: ")
 # Özsermaye
     c8 = st.number_input("Özsermaye : ")
-  operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
+    operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
     if operation == "İŞLEM SEÇİN":
       st.write(f"İŞLEM SEÇİN")
