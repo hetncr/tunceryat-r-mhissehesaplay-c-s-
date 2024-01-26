@@ -84,9 +84,9 @@ if hisse_adi:
       veri.drop(columns=["itemCode","itemDescEng"],inplace=True)
       # Select the first row by its index
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
+      Ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
+      Ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
       OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
