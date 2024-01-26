@@ -197,7 +197,7 @@ if hisse_adi:
               # Print the results
               #print(sek_ortalama)
               st.write(f"**Sektör F/K Oranı:** {sek_ortalama_fk_float}") #, box=True)
-              st.write(f"**Sektör PD/DD Oranı:** {sek_ortalama_pd_float}")#, box=True)
+              st.write(f"**Sektör PD/DD Oranı:** {sek_ortalama_pd_float}", divider='rainbow')#, box=True)
           else:
               print("Error: Elements not found. Check website structure or selectors.")
 
