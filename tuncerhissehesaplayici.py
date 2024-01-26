@@ -1,7 +1,7 @@
 
 #pip install streamlit
 
-#%%writefile deneme.py
+%%writefile deneme.py
 
 import streamlit as st
 import requests
@@ -10,8 +10,8 @@ import pandas as pd
 
 
 #streamlit.config.theme.base = "dark"
-st.title(":blue[HİSSE HESAP UYGULAMASI]")
-st.subheader(":chart:**TUNCER YATIRIM**:chart:", divider='rainbow')
+st.title(":blue[Hocalar Hisse Hesaplıyor]:chart:")
+st.subheader("Road to Kıbrıs :airplane_departure: :sunglasses:", divider='rainbow')
 #st.set_page_config(
 # page_title="Hisse Hedef Fiyat Hesaplayıcı",
 #  page_icon="https://example.com/icon.png",
@@ -84,9 +84,9 @@ if hisse_adi:
       veri.drop(columns=["itemCode","itemDescEng"],inplace=True)
       # Select the first row by its index
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      Ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
+      ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      Ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
+      ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
       OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
@@ -215,13 +215,13 @@ if hisse_adi:
                   #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
           #print(f"{stock_name} PD/DD Oranı:  {pd_value}")
-          st.write(f"**Güncel Dönem Bilanço Verileri:**")          
-          st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(Ozkaynaklar1):,.0f}") #", box = True)
+          st.write(f"**Güncel Dönem Bilanço Verileri:**")
+          st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(ozkaynaklar1):,.0f}") #", box = True)
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
           st.write(f"**Geçmiş Dönem Bilanço Verileri:**")
-          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(Ozkaynaklar_2):,.0f}") #", box = True)
-          st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)          
+          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+          st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
           st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
       except KeyError:
           #print("Hisse bulunamadı.") # Stock not found in the dictionary
@@ -281,7 +281,7 @@ if hisse_adi:
 
   # Yıllık Net Kar
   #c7 = st.number_input("Yıllık Net Kar: ")
-  C7 = float(NetDonemKarı1.replace(",", ".")
+  C7 = float(NetDonemKarı1.replace(",", "."))
   #c7 = ("{float(NetDonemKarı):,.2f}")
   #c7 = NetDonemKarı
   #c15 = c7*2
@@ -289,7 +289,7 @@ if hisse_adi:
 
   # Özsermaye
   #c8 = st.number_input("Özsermaye : ")
-  c8 = float(Ozkaynaklar1)
+  c8 = float(ozkaynaklar1)
   #c8 = (f"{float(ozkaynaklar1):,.2f}")
   #c8 = ozkaynaklar1
 
