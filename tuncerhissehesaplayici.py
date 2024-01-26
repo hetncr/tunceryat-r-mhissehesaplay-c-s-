@@ -216,11 +216,11 @@ if hisse_adi:
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
           #print(f"{stock_name} PD/DD Oranı:  {pd_value}")
           st.write(f"**Güncel Dönem Bilanço Verileri:**")          
-          st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(ozkaynaklar1):,.0f}") #", box = True)
+          st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(Ozkaynaklar1):,.0f}") #", box = True)
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
           st.write(f"**Geçmiş Dönem Bilanço Verileri:**")
-          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(Ozkaynaklar_2):,.0f}") #", box = True)
           st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)          
           st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
       except KeyError:
@@ -289,7 +289,7 @@ if hisse_adi:
 
   # Özsermaye
   #c8 = st.number_input("Özsermaye : ")
-  c8 = float(ozkaynaklar1)
+  c8 = float(Ozkaynaklar1)
   #c8 = (f"{float(ozkaynaklar1):,.2f}")
   #c8 = ozkaynaklar1
 
@@ -334,11 +334,11 @@ if hisse_adi:
 
   #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
 
-  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
+  st.write(f"**ÖZKAYNAKLAR:**  {float(Ozkaynaklar1):,.0f}") #", box = True)  
   st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
   st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
   
-  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(Ozkaynaklar_2):,.0f}") #", box = True)
   st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
     # Özsermaye
