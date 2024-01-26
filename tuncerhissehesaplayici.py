@@ -393,7 +393,7 @@ if hisse_adi:
     c7 = st.number_input("Yıllık Net Kar: ")
 # Özsermaye
     c8 = st.number_input("Özsermaye : ")
-    operation_manuel = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
+    operation_manuel = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
     if operation_manuel == "İŞLEM SEÇİN":
       st.write(f"İŞLEM SEÇİN")
