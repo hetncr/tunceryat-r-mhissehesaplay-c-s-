@@ -329,8 +329,8 @@ if hisse_adi:
   st.write()
   
   with st.sidebar:
- #Gelecek Özkaynak Tahmini Miktarı
-  # Gelecek Özkaynak Tahmini Miktarı
+  #Gelecek Özkaynak Tahmini Miktarı
+  #Gelecek Özkaynak Tahmini Miktarı
     c22 = st.number_input(f"**Geçmiş Dönem Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın")
     c24 = st.number_input(f"**Geçmiş Dönem Net Kar:**", value=None, placeholder="Geçmiş Dönem Net Kar tutarını bu alana yazın")
     islem_1 = st.selectbox("Gelecek Özkaynak ve Net Kar Tahmini Miktarı:", ["Gelecek Özkaynak Tahmini Miktarı", " Gelecek Net Kar Tahmini Miktarı"])
