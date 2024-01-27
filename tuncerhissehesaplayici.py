@@ -437,7 +437,7 @@ if hisse_adi:
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
     st.write(f"İŞLEM SEÇİN")
-    st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
+    #st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
 
   elif operation == "F/K HEDEF FİYAT":
     if c10 != 0:
