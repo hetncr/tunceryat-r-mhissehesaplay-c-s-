@@ -328,7 +328,7 @@ if hisse_adi:
   st.write()
   st.write()
   
-  with sidebar:
+  with st.sidebar:
  Gelecek Özkaynak Tahmini Miktarı
   # Gelecek Özkaynak Tahmini Miktarı
     c22 = st.number_input(f"**Geçmiş Dönem Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın")
