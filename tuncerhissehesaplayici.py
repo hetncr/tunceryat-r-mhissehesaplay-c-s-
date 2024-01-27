@@ -327,30 +327,9 @@ if hisse_adi:
   st.write()
   st.write()
   st.write()
-
-
-  st.write("Not: Ödenmiş Sermaye, Özsermaye Karlılığı ve Potansiyel Karlılık Hedef Fiyat Hesaplamaları İçin Aşağıdaki Bölümü Kullanın:arrow_down:")
-  # MANUEL VERİ GİRİŞİ İLE HEDEF FİYAT HESAPLAMA
-
-  #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
-
-  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
-  st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
-  st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
   
-  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
-  st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
-
-    # Özsermaye
-  c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
-
-    # Ödenmiş Sermaye
-  c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
-
-    # Yıllık Net Kar
-  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
-  with st.sidebar:
-    # Gelecek Özkaynak Tahmini Miktarı
+  with.sidebar:
+ Gelecek Özkaynak Tahmini Miktarı
   # Gelecek Özkaynak Tahmini Miktarı
     c22 = st.number_input(f"**Geçmiş Dönem Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın")
     c24 = st.number_input(f"**Geçmiş Dönem Net Kar:**", value=None, placeholder="Geçmiş Dönem Net Kar tutarını bu alana yazın")
@@ -432,7 +411,30 @@ if hisse_adi:
     #st.write(f"**Gelecek Özkaynak Tahmini Miktarı:** {c25}")
   #else:
     #st.write("Hesaplama Yapılamadı")  
-        
+            
+
+  st.write("Not: Ödenmiş Sermaye, Özsermaye Karlılığı ve Potansiyel Karlılık Hedef Fiyat Hesaplamaları İçin Aşağıdaki Bölümü Kullanın:arrow_down:")
+  # MANUEL VERİ GİRİŞİ İLE HEDEF FİYAT HESAPLAMA
+
+  #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
+
+  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
+  st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
+  st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
+  
+  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+  st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
+
+    # Özsermaye
+  c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
+
+    # Ödenmiş Sermaye
+  c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
+
+    # Yıllık Net Kar
+  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
+  #with st.sidebar:
+    #
   operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
