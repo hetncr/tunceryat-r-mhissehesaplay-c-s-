@@ -166,7 +166,7 @@ if hisse_adi:
     elif operation_manuel == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
       c21_1 = (c7_1*7)+(c8_1*0.5)
       potansiyel_fiyat_1 = c21_1/c4_1
-      st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat:,.2f}")
+      st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat_1:,.2f}")
     #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   #operation = st.selectbox("[ORTALAMA HEDEF FİYAT]")
       fk_hedef_fiyat_1 = c3_1 / c10_1 * c12_1
