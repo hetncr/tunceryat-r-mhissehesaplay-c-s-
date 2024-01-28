@@ -315,10 +315,7 @@ if hisse_adi:
   else:
       #print("Bir sorun var!")  # Stock not found in any of the dictionaries
       st.write(":red[Veri eksikliği var. Lütfen hisseyi kontrol ediniz!]")
-
-  st.write(" İş Yatırım Sayfası İçin Tıklayın: [link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
-  st.write(" Tradingview Grafik Sayfası İçin Tıklayın: [link](https://tr.tradingview.com/chart/)")
-  
+    
   #import streamlit_tags as tags
 
   #st.write("Hisse Hedef Fiyat Hesaplayıcı")
@@ -505,6 +502,9 @@ else:
   st.write(":arrow_up:","Lütfen Yukarıdaki Alana Hisse Yazınız",":arrow_up:")
   st.write(":red[(Not: Bankalar İşleme Dahil Değildir)]")
 
+st.write(" İş Yatırım Sayfası İçin Tıklayın: [link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
+st.write(" Tradingview Grafik Sayfası İçin Tıklayın: [link](https://tr.tradingview.com/chart/)")
+  
     #if __name__ == "__main__":
     #  st.run()
 
