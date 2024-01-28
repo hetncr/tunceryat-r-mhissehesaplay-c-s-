@@ -254,6 +254,8 @@ if hisse_adi:
   # Get the stock name from the user
   stock_name = hisse_adi #input("Hisse Adı Giriniz: ").upper()
 
+  st.subheader(":one:**:blue[HİSSE VERİLERİ]**", divider='rainbow')
+  
   if stock_name:
       # Check if the input is in the dictionary
       if stock_name in hisse_sektor:
@@ -384,7 +386,7 @@ if hisse_adi:
 
   # HİSSE HESAPLAYICISI SELECT BOX İLE F/K VE PD/DD ORANLARINA GÖRE HESAPLAMA
   #st.write("**HİSSE HEDEF FİYAT HESAPLAYICI**")
-  st.subheader(":one:**HİSSE HEDEF FİYAT HESAPLAYICI**", divider='rainbow')
+  st.subheader(":two:**HİSSE HEDEF FİYAT HESAPLAYICI**", divider='rainbow')
 
   #operation = st.selectbox("İşlem Seçimi:", ["F/K Hedef Fiyat", "P/D Hedef Fiyat"])
 
