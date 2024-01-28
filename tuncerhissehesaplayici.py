@@ -336,14 +336,14 @@ if hisse_adi:
     c24 = st.number_input(f"**Geçmiş Dönem Tutarı:**", value=None, placeholder="Geçmiş dönem tutarını bu alana yazın")
     #c22 = st.number_input(f"**Geçmiş Dönem Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın")
     #c24 = st.number_input(f"**Geçmiş Dönem Net Kar:**", value=None, placeholder="Geçmiş Dönem Net Kar tutarını bu alana yazın")
-    islem_1 = st.selectbox("Gelecek Özkaynak ve Net Kar Tahmini Miktarı:", ["Gelecek Özkaynak Tahmini Miktarı", " Gelecek Net Kar Tahmini Miktarı"])
-    if islem_1 == "Gelecek Özkaynak Tahmini Miktarı":
+    islem_1 = st.selectbox("Gelecek Özkaynak ve Net Kar Tahmini Miktarı:", ["Gelecek Dönem Tahmini Miktarı"])
+    if islem_1 == "Gelecek Dönem Tahmini Miktarı":
       # Ensure both c8 and c22 have valid numerical values before calculation
         if c8 is not None and c22 is not None:
             c25 = c22 + (c24 - c22)  # Calculate the future equity amount
-            st.write(f"**Gelecek Özkaynak Tahmini Miktarı:** {c25}")
+            st.write(f"**Gelecek Dönem Tahmini Miktarı:** {c25}")
         else:
-            st.write("Hesaplama için Özkaynaklar (Özsermaye) ve Geçmiş Dönem Özkaynaklar tutarlarını giriniz.")
+            st.write("Hesaplama için Güncel ve Geçmiş Dönem tutarlarını giriniz.")
     #else:
         #st.write("Hesaplama Yapılamadı")
     #elif islem_1 == " Gelecek Net Kar Tahmini Miktarı":
@@ -437,7 +437,7 @@ if hisse_adi:
     # Yıllık Net Kar
   c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
   #with st.sidebar:
-    #
+    
   operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
