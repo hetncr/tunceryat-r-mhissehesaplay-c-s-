@@ -418,12 +418,12 @@ if hisse_adi:
 
   #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
 
-  st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
-  st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
-  st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
+  #st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
+  #st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
+  #st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
   
-  st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
-  st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
+  #st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+  #st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
     # Özsermaye
   c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
