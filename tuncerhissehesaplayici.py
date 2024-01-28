@@ -123,8 +123,8 @@ if hisse_adi:
     islem_1 = st.selectbox("Gelecek Özkaynak ve Net Kar Tahmini Miktarı:", ["Gelecek Dönem Tahmini Miktarı"])
     if islem_1 == "Gelecek Dönem Tahmini Miktarı":
       # Ensure both c8 and c22 have valid numerical values before calculation
-        if c8 is not None and c22 is not None:
-            c25 = c22 + (c24 - c22)  # Calculate the future equity amount
+        if c22 is not None and c24 is not None:
+            c25 = c22 + (c22 - c24)  # Calculate the future equity amount
             st.write(f"**Gelecek Dönem Tahmini Miktarı:** {c25}")
         else:
             st.write("Hesaplama için Güncel ve Geçmiş Dönem tutarlarını giriniz.")
