@@ -112,6 +112,9 @@ if hisse_adi:
     print("An AttributeError occurred")
     # skip the iteration
     #continue
+
+  st.write(" İş Yatırım Sayfası İçin Tıklayın: [link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
+  st.write(" Tradingview Grafik Sayfası İçin Tıklayın: [link](https://tr.tradingview.com/chart/)")
   
   with st.sidebar:
   #Gelecek Özkaynak Tahmini Miktarı
@@ -502,9 +505,8 @@ else:
   st.write(":arrow_up:","Lütfen Yukarıdaki Alana Hisse Yazınız",":arrow_up:")
   st.write(":red[(Not: Bankalar İşleme Dahil Değildir)]")
 
-st.write(" İş Yatırım Sayfası İçin Tıklayın: [link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
-st.write(" Tradingview Grafik Sayfası İçin Tıklayın: [link](https://tr.tradingview.com/chart/)")
-  
+
+
     #if __name__ == "__main__":
     #  st.run()
 
