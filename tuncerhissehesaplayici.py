@@ -311,7 +311,7 @@ if hisse_adi:
           st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(ozkaynaklar1):,.0f}") #", box = True)
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
-          st.write(f"**Geçmiş Dönem Bilanço Verileri:**")
+          st.write(f"**Geçmiş Dönem Bilanço Verileri:**", divider="grey")
           st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
           st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
           st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
