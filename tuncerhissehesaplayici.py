@@ -307,7 +307,7 @@ if hisse_adi:
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
           #print(f"{stock_name} PD/DD Oranı:  {pd_value}")
           #st.write(f"**Güncel Dönem Bilanço Verileri:**")
-          st.subheader(f"**Güncel Dönem Bilanço Verileri:**", divider='')
+          st.subheader(f"**Bilanço Verileri:**", divider='black')
           st.write(f"**:blue[ÖZKAYNAKLAR:]**  {float(ozkaynaklar1):,.0f}") #", box = True)
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
