@@ -297,7 +297,7 @@ if hisse_adi:
   if stock_name in hisse_oran:
       try:
           # Access the stock data and extract the F/K value
-          kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", "")
+          kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)
@@ -331,21 +331,21 @@ if hisse_adi:
   c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
 
   #c10 = float(st.number_input("Hisse F/K Oranı:"))
-  ##c10 = float(fk_value.replace(",", "."))
+  c10 = float(fk_value.replace(",", "."))
   #if c10 != "A/D":
   #  c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
 
-  if stock_name in hisse_oran:
+  ##if stock_name in hisse_oran:
     #try:
     # fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")
-    c10 = float(fk_value.replace(",", "."))
+    ##c10 = float(fk_value.replace(",", "."))
     #except KeyError:
       #print("Hisse bulunamadı.") # Stock not found in the dictionary
       #st.write("F/K Verisi Bulunamadı")
-  else:
+  ##else:
     #print("Bir sorun var!") # Stock not found in any of the dictionaries
     #st.write()
-    c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
+    ##c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
 
 
   # HİSSE PD/DD ORANI
