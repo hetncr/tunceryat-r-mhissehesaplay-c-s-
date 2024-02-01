@@ -86,6 +86,8 @@ if hisse_adi:
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
       ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
+      ozkaynaklar_3 = Ozkaynaklar.iloc[0,2]
+      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
       ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
       OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
@@ -93,6 +95,8 @@ if hisse_adi:
       OdenmisSermaye_2 = OdenmisSermaye.iloc[0,4]
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı1 = NetDonemKarı.iloc[0,1]
+      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
+      NetDonemKarı_3 = NetDonemKarı.iloc[0,2]
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı_2 = NetDonemKarı.iloc[0,4]
 
@@ -312,9 +316,11 @@ if hisse_adi:
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
           st.write(f"**Geçmiş Dönem Bilanço Verileri:**")
-          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+          st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(ozkaynaklar_3):,.0f}")
+          st.write(f"**NET DÖNEM KARI(Bir Önceki Çeyrek):**  {float(NetDonemKarı_3):,.0f})
+          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl ):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
           st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
-          st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
+          st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)      
       except KeyError:
           #print("Hisse bulunamadı.") # Stock not found in the dictionary
           st.write("Hisse bulunamadı.")
