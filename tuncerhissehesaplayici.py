@@ -373,22 +373,22 @@ if hisse_adi:
 
   # Ödenmiş Sermaye
   #c4 = st.number_input("Ödenmiş Sermaye: ")
-  ##c4 = float(OdenmisSermaye1)
-  c4 = ("{float(OdenmisSermaye):,.2f}")
+  c4 = float(OdenmisSermaye1)
+  ###c4 = ("{float(OdenmisSermaye):,.2f}")
   ####c4 = float(OdenmisSermaye.replace(",", "."))
 
   # Yıllık Net Kar
   #c7 = st.number_input("Yıllık Net Kar: ")
-  ##c7 = float(NetDonemKarı1.replace(",", "."))
-  c7 = ("{float(NetDonemKarı1):,.2f}")
+  c7 = float(NetDonemKarı1.replace(",", "."))
+  ###c7 = ("{float(NetDonemKarı1):,.2f}")
   ###c7 = float(NetDonemKarı1.replace(",", "."))
   #c15 = c7*2
   #st.write(c15)
 
   # Özsermaye
   #c8 = st.number_input("Özsermaye : ")
-  ##c8 = float(ozkaynaklar1)
-  c8 = (f"{float(ozkaynaklar1):,.2f}")
+  c8 = float(ozkaynaklar1)
+  ###c8 = (f"{float(ozkaynaklar1):,.2f}")
   ###c8 = float(ozkaynaklar1.replace(",", "."))
 
 
