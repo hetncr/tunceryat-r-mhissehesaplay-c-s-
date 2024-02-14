@@ -84,21 +84,25 @@ if hisse_adi:
       veri.drop(columns=["itemCode","itemDescEng"],inplace=True)
       # Select the first row by its index
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
+      #ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
+      ozkaynaklar1 = float(Ozkaynaklar.iloc[0, 1].replace(",", "").replace(".", ""))      
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
       ozkaynaklar_3 = Ozkaynaklar.iloc[0,2]
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
       ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
-      OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
+      #OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
+      OdenmisSermaye1 = float(OdenmisSermaye.iloc[0, 1].replace(",", "").replace(".", ""))
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
       OdenmisSermaye_2 = OdenmisSermaye.iloc[0,4]
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
-      NetDonemKarı1 = NetDonemKarı.iloc[0,1]
+      #NetDonemKarı1 = NetDonemKarı.iloc[0,1]
+      NetDonemKarı1 = float(NetDonemKarı.iloc[0, 1].replace(",", "").replace(".", ""))
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı_3 = NetDonemKarı.iloc[0,2]
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı_2 = NetDonemKarı.iloc[0,4]
+
 
       #print("Özkaynaklar:", ozkaynaklar1)
       #print("Ödenmiş Sermaye:", OdenmisSermaye)
