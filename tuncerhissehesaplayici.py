@@ -508,7 +508,7 @@ if hisse_adi:
      # st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
   #elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
     #st.write(f"ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT: {odenmis_hedef_fiyat:,.2f}")
-      st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+    #  st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   #elif operation == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
     #if c10 != 0:
    # ozsermaye_hf = (c7/c8)*10/c11*c3
