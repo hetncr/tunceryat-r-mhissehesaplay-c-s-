@@ -106,9 +106,9 @@ if hisse_adi:
       NetDonemKarı_3 = float(NetDonemKarı.iloc[0,3].replace(",","."))      
       ##Dört Dönem Önceki Bilanço
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar_4 = Ozkaynaklar.iloc[0,4].replace(",", "."))  
+      ozkaynaklar_4 = float(Ozkaynaklar.iloc[0,4].replace(",", "."))  
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
-      OdenmisSermaye_4 = OdenmisSermaye.iloc[0,4].replace(",", ".")) # 4 Dönem Önceki Bilanço
+      OdenmisSermaye_4 = float(OdenmisSermaye.iloc[0,4].replace(",", ".")) # 4 Dönem Önceki Bilanço
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı_4 = float(NetDonemKarı.iloc[0,4].replace(",","."))
 
