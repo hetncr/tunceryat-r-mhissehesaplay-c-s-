@@ -319,15 +319,15 @@ if hisse_adi:
           if fk_value != "A/D":
             st.write(f"**:blue[HİSSE F/K ORANI:]**  {fk_value}") #, box = True)
           else:  
-            fk_value_1 = st.number_input(f"**:blue[F/K Oranı Giriniz:]**")
+            fk_value_1 = st.number_input(f"**:blue[F/K ORANI GİRİNİZ:]**")
             fk_value = float(fk_value_1)
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           if pd_value != "A/D":
-            st.write(f"**:blue[HİSSE F/K ORANI:]**  {pd_value}") #, box = True)
+            st.write(f"**:blue[HİSSE PD/DD ORANI:]**  {pd_value}") #, box = True)
           else:  
-            pd_value_1 = st.number_input("F/K Oranı Giriniz:")
-            pd_value = float(fk_value_1)
-       ##   st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
+            pd_value_1 = st.number_input(f"**:blue[PD/DD ORANI GİRİNİZ:]**
+            pd_value = float(pd_value_1)
+          st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
           st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
           #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
