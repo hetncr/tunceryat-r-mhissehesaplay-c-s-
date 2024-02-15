@@ -548,7 +548,7 @@ if hisse_adi:
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
 
   elif operation == "4. Çeyrek Bilançosuna Göre Hisse Oranları":
-    c7_3 = c7+c6 ## Yılsonu Net Kar Tahmini
+    #c7_3 = c7+c6 ## Yılsonu Net Kar Tahmini
     c16_4 = c7 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
     #c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
     c17 = c3 / c16_4 ## Yılsonu F/K Oranı Tahmini
