@@ -521,7 +521,7 @@ if hisse_adi:
   elif operation == "Birinci Çeyrek Bilançosuna Göre Hisse Oranları":
     c7_3 = c7*4 ## Yılsonu Net Kar Tahmini
     c10 = c7/c4
-    c16_3 = c7_1 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
+    c16_3 = c7_3 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
     c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
     c17 = c3 / c16   ## İlgili Bilanço Dönemi F/K Oranı
     c17_3 = c3 / c16_3 ## Yılsonu F/K Oranı Tahmini
