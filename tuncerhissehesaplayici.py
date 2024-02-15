@@ -314,14 +314,16 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
-          if f_k in hisse_oran:
-            fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
-          else:
+          fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
+          if fk_value > 0 :
+            st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
+          else :  
             fk_value_1 = st.number_input("F/K Oranı Giriniz:")
             fk_value = float(fk_value_1)
+         
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)
-          st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
+       ##   st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
           st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
           #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
