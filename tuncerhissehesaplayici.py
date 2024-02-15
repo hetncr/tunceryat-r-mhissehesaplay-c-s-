@@ -351,7 +351,7 @@ if hisse_adi:
   c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
 
   #c10 = float(st.number_input("Hisse F/K Oranı:"))
-  c10 = float(fk_value.replace(",", "."))
+##  c10 = float(fk_value.replace(",", "."))
   #if c10 != "A/D":
   #  c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
 
@@ -383,13 +383,20 @@ if hisse_adi:
   # Ödenmiş Sermaye
   ##c4 = st.number_input("Ödenmiş Sermaye: ")
   c4 = float(OdenmisSermaye1) #Otomatik Veri İşlem İçin Bu Satır
+  c4_2 = float(OdenmisSermaye_2) #Otomatik Veri İşlem İçin Bu Satır
+  c4_3 = float(OdenmisSermaye_3) #Otomatik Veri İşlem İçin Bu Satır
+  c4_4 = float(OdenmisSermaye_4) #Otomatik Veri İşlem İçin Bu Satır
+  
   ###c4 = ("{float(OdenmisSermaye):,.2f}")
   ####c4 = float(OdenmisSermaye.replace(",", "."))
 
   # Yıllık Net Kar
   ##c7 = st.number_input("Yıllık Net Kar: ")
   c7 = float(NetDonemKarı1) #Otomatik Veri İşlem İçin Bu Satır
-  ###c7 = ("{float(NetDonemKarı1):,.2f}")
+  c7_2 = float(NetDonemKarı_2)
+  c7_3 = float(NetDonemKarı_3)
+  c7_4 = float(NetDonemKarı_4)
+    ###c7 = ("{float(NetDonemKarı1):,.2f}")
   ###c7 = float(NetDonemKarı1.replace(",", "."))
   #c15 = c7*2
   #st.write(c15)
@@ -397,13 +404,11 @@ if hisse_adi:
   # Özsermaye
   ##c8 = st.number_input("Özsermaye : ")
   c8 = float(ozkaynaklar1) #Otomatik Veri İşlem İçin Bu Satır
+  c8_2 = float(ozkaynaklar_2)
+  c8_3 = float(ozkaynaklar_3)
+  c8_4 = float(ozkaynaklar_4)
   ###c8 = (f"{float(ozkaynaklar1):,.2f}")
   ###c8 = float(ozkaynaklar1.replace(",", "."))
-
-  #EPS ve YILSONU F/K TAHMİNİ 
-  c16 = c7/c4 # EPS (Hisse Başı Kazanç)
-  c17 = c3/c16  
-
 
   # Güncel Piyasa Değeri
   #c9 = st.number_input("Güncel Piyasa Değeri: ")
@@ -512,6 +517,43 @@ if hisse_adi:
     st.write(f":blue[ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT]: {ozsermaye_hf:,.2f}")
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
     st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+  
+  elif operation == "Birinci Çeyrek Bilançosuna Göre Hisse Oranları":
+    c7_3 = c7*4 ## Yılsonu Net Kar Tahmini
+    c10 = c7/c4
+    c16_3 = c7_1 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
+    c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
+    c17 = c3 / c16   ## İlgili Bilanço Dönemi F/K Oranı
+    c17_3 = c3 / c16_3 ## Yılsonu F/K Oranı Tahmini
+    c21 = (c7_3*7)+(c8*0.5)
+    potansiyel_fiyat = c21/c4
+    future_f/k = (c3/c17_3)*c12
+    fk_hedef_fiyat = c3 / c10 * c12
+    pd_hedef_fiyat = c3 / c11 * c13
+    ozsermaye_hf = (c7/c8)*10/c11*c3 ##Yılsonu Tahmini Özsermaye Karlılığına Göre Hedef Fiyat
+    odenmis_hedef_fiyat = (c7 / c4) * c10
+    ortalama_hesap = ( fk_hedef_fiyat + future_f/k + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
+  #if operation == "ORTALAMA HEDEF FİYAT":
+  #st.write(ortalama_hesap)
+  #if ortalama_hesap < kapanıs :
+    #st.write(f":blue[**TÜM HESAPLAMALARIN ORTALAMA FİYATI:**] {ortalama_hesap:,.2f}")
+  #else :
+    #st.write(f"**TÜM HESAPLAMALARIN ORTALAMA FİYATI:** :green[{ortalama_hesap:,.2f}]")
+  #elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
+    st.write(f":blue[**Güncel EPS (Hisse Başı Kazanç):**] { c16 :,.2f}")
+    st.write(f":blue[**Yılsonu EPS (Hisse Başı Kazanç) Tahmini:**] { c16_3 :,.2f}")    
+    st.write(f":blue[**Güncel F/K:**] { c17 :,.2f}")
+    st.write(f":blue[**Potansiyel Piyasa Değerine Göre Olması Gereken Fiyat:**] { potansiyel_fiyat :,.2f}")    
+    st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
+    st.write(f":blue[**YILSONU TAHMİNİ F/K HEDEF FİYATI:**] {fk_hedef_fiyat:,.2f}")
+    st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
+    st.write(f":blue[**ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:**] {odenmis_hedef_fiyat:,.2f}")
+    st.write(f":blue[**ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT**]: {ozsermaye_hf:,.2f}")
+    st.write(f":chart:**:blue[TÜM HESAPLAMALARIN ORTALAMA FİYATI:]** {ortalama_hesap:,.2f}")
+    st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
+   
+  
+  
   elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
     c21 = (c7*7)+(c8*0.5)
     potansiyel_fiyat = c21/c4
