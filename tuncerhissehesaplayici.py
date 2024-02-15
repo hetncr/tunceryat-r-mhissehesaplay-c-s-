@@ -83,26 +83,34 @@ if hisse_adi:
       # gereksiz sütunları kaldırın
       veri.drop(columns=["itemCode","itemDescEng"],inplace=True)
       # Select the first row by its index
+      ##En Son ÇEYREK
       Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      #ozkaynaklar1 = Ozkaynaklar.iloc[0,1]
       ozkaynaklar1 = float(Ozkaynaklar.iloc[0, 1].replace(",", "."))      
-      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar_3 = Ozkaynaklar.iloc[0,2]
-      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
-      ozkaynaklar_2 = Ozkaynaklar.iloc[0,4]
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
-      #OdenmisSermaye1 = OdenmisSermaye.iloc[0,1]
-      OdenmisSermaye1 = float(OdenmisSermaye.iloc[0, 1].replace(",", "."))
+      OdenmisSermaye1 = float(OdenmisSermaye.iloc[0, 1].replace(",", "."))      
+      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
+      NetDonemKarı1 = float(NetDonemKarı.iloc[0, 1].replace(",", "."))      
+      ##Bir Önceki Çeyrek
+      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
+      ozkaynaklar_2 = float(Ozkaynaklar.iloc[0,2].replace(",", "."))  
+      OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']     
+      OdenmisSermaye_2 = float(OdenmisSermaye.iloc[0, 2].replace(",", ".")) 
+      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
+      NetDonemKarı_2 = float(NetDonemKarı.iloc[0,2].replace(",", "."))       
+      #İki Önceki Çeyrek Bilanço
+      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
+      ozkaynaklar_3 = float(Ozkaynaklar.iloc[0,3].replace(",", "."))  
+      OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']     
+      OdenmisSermaye_3 = float(OdenmisSermaye.iloc[0, 3].replace(",", "."))    
+      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
+      NetDonemKarı_3 = float(NetDonemKarı.iloc[0,3].replace(",","."))      
+      ##Dört Dönem Önceki Bilanço
+      Ozkaynaklar =  veri[veri['itemDescTr'] == 'Özkaynaklar']
+      ozkaynaklar_4 = Ozkaynaklar.iloc[0,4].replace(",", "."))  
       OdenmisSermaye = veri[veri['itemDescTr'] == '  Ödenmiş Sermaye']
-      OdenmisSermaye_2 = OdenmisSermaye.iloc[0,4]
+      OdenmisSermaye_4 = OdenmisSermaye.iloc[0,4].replace(",", ".")) # 4 Dönem Önceki Bilanço
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
-      #NetDonemKarı1 = NetDonemKarı.iloc[0,1]
-      NetDonemKarı1 = float(NetDonemKarı.iloc[0, 1].replace(",", "."))
-      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
-      NetDonemKarı_3 = NetDonemKarı.iloc[0,2]
-      NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
-      NetDonemKarı_2 = NetDonemKarı.iloc[0,4]
-
+      NetDonemKarı_4 = float(NetDonemKarı.iloc[0,4].replace(",","."))
 
       #print("Özkaynaklar:", ozkaynaklar1)
       #print("Ödenmiş Sermaye:", OdenmisSermaye)
@@ -320,11 +328,12 @@ if hisse_adi:
           st.write(f"**:blue[ÖDENMİŞ SERMAYE:]**  {float(OdenmisSermaye1):,.0f}") #, box = True)
           st.write(f"**:blue[NET DÖNEM KARI:]**  {float(NetDonemKarı1):,.0f}") #, box = True)
           st.write(f"**Geçmiş Dönem Bilanço Verileri:**")
-          st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(ozkaynaklar_3):,.0f}")
-          st.write(f"**NET DÖNEM KARI(Bir Önceki Çeyrek):**  {float(NetDonemKarı_3):,.0f}")
-          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl ):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
-          st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
-          st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)      
+          st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(ozkaynaklar_2):,.0f}")
+          st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(OdenmisSermaye_2):,.0f}")         
+          st.write(f"**NET DÖNEM KARI(Bir Önceki Çeyrek):**  {float(NetDonemKarı_2):,.0f}")
+          st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl ):**  {float(ozkaynaklar_4):,.0f}") #", box = True)
+          st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_4):,.0f}") #, box = True)
+          st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_4):,.0f}") #, box = True)      
       except KeyError:
           #print("Hisse bulunamadı.") # Stock not found in the dictionary
           st.write("Hisse bulunamadı.")
@@ -451,6 +460,13 @@ if hisse_adi:
     # Yıllık Net Kar
 ##  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
   #with st.sidebar:
+
+###Geçmiş Dönem Bilanço Verileri
+###       st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(ozkaynaklar_3):,.0f}")
+###       st.write(f"**NET DÖNEM KARI(Bir Önceki Çeyrek):**  {float(NetDonemKarı_3):,.0f}")
+###       st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl ):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
+###       st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
+###       st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
   operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
