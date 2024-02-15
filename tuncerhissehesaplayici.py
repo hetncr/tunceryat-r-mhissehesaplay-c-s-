@@ -314,8 +314,9 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
-          fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
-          if fk_value > 0 :
+          fk_value1 = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
+          fk_value = float(fk_value1)
+        if fk_value > 0 :
             st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
           else :  
             fk_value_1 = st.number_input("F/K Oranı Giriniz:")
