@@ -319,16 +319,16 @@ if hisse_adi:
           if fk_value != "A/D":
             st.write(f"**:blue[HİSSE F/K ORANI:]**  {fk_value}") #, box = True)
           else:  
-            fk_value_1 = st.number_input(f"**:blue[F/K ORANI GİRİNİZ:]**")
+            fk_value_1 = st.number_input(f"**:blue[F/K VERİSİNE ULAŞILAMAMIŞTIR LÜTFEN F/K ORANI GİRİNİZ:]**")
             fk_value = float(fk_value_1)
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           if pd_value != "A/D":
             st.write(f"**:blue[HİSSE PD/DD ORANI:]**  {pd_value}") #, box = True)
           else:  
-            pd_value_1 = st.number_input(f"**:blue[PD/DD ORANI GİRİNİZ:]**")
+            pd_value_1 = st.number_input(f"**:blue[PD/DD VERİSİNE ULAŞILAMAMIŞTIR LÜTFEN PD/DD ORANI GİRİNİZ:]**")
             pd_value = float(pd_value_1)
-          st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
-          st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
+          #st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
+          #st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
           #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
           #print(f"{stock_name} PD/DD Oranı:  {pd_value}")
@@ -360,23 +360,11 @@ if hisse_adi:
   #c3 = float(kapanıs)
   c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
 
+  # Hisse F/K Oranı
   #c10 = float(st.number_input("Hisse F/K Oranı:"))
-##  c10 = float(fk_value.replace(",", "."))
+  c10 = float(fk_value.replace(",", "."))
   #if c10 != "A/D":
   #  c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
-
-  ##if stock_name in hisse_oran:
-    #try:
-    # fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")
-    ##c10 = float(fk_value.replace(",", "."))
-    #except KeyError:
-      #print("Hisse bulunamadı.") # Stock not found in the dictionary
-      #st.write("F/K Verisi Bulunamadı")
-  ##else:
-    #print("Bir sorun var!") # Stock not found in any of the dictionaries
-    #st.write()
-    ##c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
-
 
   # HİSSE PD/DD ORANI
   #c11 = st.number_input("Hisse PD/DD Oranı: ")
@@ -528,12 +516,11 @@ if hisse_adi:
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
     st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   
-  elif operation == "Birinci Çeyrek Bilançosuna Göre Hisse Oranları":
+  elif operation == "Birinci Çeyrek Bilançoya Göre Hisse Oranları":
     c7_3 = c7*4 ## Yılsonu Net Kar Tahmini
-    c10 = c7/c4
+    c10_f = c7/c4
     c16_3 = c7_3 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
-    c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
-    c17 = c3 / c16   ## İlgili Bilanço Dönemi F/K Oranı
+    #c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
     c17_3 = c3 / c16_3 ## Yılsonu F/K Oranı Tahmini
     c21 = (c7_3*7)+(c8*0.5)
     potansiyel_fiyat = c21/c4
@@ -550,9 +537,9 @@ if hisse_adi:
   #else :
     #st.write(f"**TÜM HESAPLAMALARIN ORTALAMA FİYATI:** :green[{ortalama_hesap:,.2f}]")
   #elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
-    st.write(f":blue[**Güncel EPS (Hisse Başı Kazanç):**] { c16 :,.2f}")
-    st.write(f":blue[**Yılsonu EPS (Hisse Başı Kazanç) Tahmini:**] { c16_3 :,.2f}")    
-    st.write(f":blue[**Güncel F/K:**] { c17 :,.2f}")
+    #st.write(f":blue[**Güncel EPS (Hisse Başı Kazanç):**] { c16 :,.2f}")
+    #st.write(f":blue[**Yılsonu EPS (Hisse Başı Kazanç) Tahmini:**] { c16_3 :,.2f}")    
+    #st.write(f":blue[**Güncel F/K:**] { c17 :,.2f}")
     st.write(f":blue[**Potansiyel Piyasa Değerine Göre Olması Gereken Fiyat:**] { potansiyel_fiyat :,.2f}")    
     st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
     st.write(f":blue[**YILSONU TAHMİNİ F/K HEDEF FİYATI:**] {fk_hedef_fiyat:,.2f}")
