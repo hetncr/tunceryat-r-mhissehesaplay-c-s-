@@ -325,7 +325,7 @@ if hisse_adi:
           if pd_value != "A/D":
             st.write(f"**:blue[HİSSE PD/DD ORANI:]**  {pd_value}") #, box = True)
           else:  
-            pd_value_1 = st.number_input(f"**:blue[PD/DD ORANI GİRİNİZ:]**
+            pd_value_1 = st.number_input(f"**:blue[PD/DD ORANI GİRİNİZ:]**")
             pd_value = float(pd_value_1)
           st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
           st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
