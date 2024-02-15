@@ -316,7 +316,7 @@ if hisse_adi:
           kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
           if f_k in hisse_oran:
             fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
-          else
+          else:
             fk_value = float(st.number_input("Hisse F/K Oranı:"))
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)
