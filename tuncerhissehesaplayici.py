@@ -471,7 +471,7 @@ if hisse_adi:
 ###       st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
 ###       st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
-  operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "1. Çeyrek Bilançosuna Göre Hisse Oranları", "2. Çeyrek Bilançosuna Göre Hisse Oranları", "3. Çeyrek Bilançosuna Göre Hisse Oranları", "4. Çeyrek Bilançosuna Göre Hisse Oranları", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
+  operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "1. Çeyrek Bilançosuna Göre Hisse Oranları", "2. Çeyrek Bilançosuna Göre Hisse Oranları", "3. Çeyrek Bilançosuna Göre Hisse Oranları", "4. Çeyrek Bilançosuna Göre Hisse Oranları"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
     st.write(f"İŞLEM SEÇİN")
