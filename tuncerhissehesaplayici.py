@@ -368,7 +368,7 @@ if hisse_adi:
 
   # HİSSE PD/DD ORANI
   #c11 = st.number_input("Hisse PD/DD Oranı: ")
-  c11 = float(pd_value.replace(",", ".")))
+  c11 = float(pd_value.replace(",", "."))
 
   # BİST100 /SEKTÖR GÜNCEL F/K ORANI
   #c12 = float(st.number_input("BİST100 / Sektör Güncel F/K Oranı: "))
