@@ -527,12 +527,12 @@ if hisse_adi:
     c17_3 = c3 / c16_3 ## Yılsonu F/K Oranı Tahmini
     c21 = (c7_3*7)+(c8*0.5)
     potansiyel_fiyat = c21/c4
-    future_f/k = (c3/c17_3)*c12
+    future_fk = (c3/c17_3)*c12
     fk_hedef_fiyat = c3 / c10 * c12
     pd_hedef_fiyat = c3 / c11 * c13
     ozsermaye_hf = (c7/c8)*10/c11*c3 ##Yılsonu Tahmini Özsermaye Karlılığına Göre Hedef Fiyat
     odenmis_hedef_fiyat = (c7 / c4) * c10
-    ortalama_hesap = ( fk_hedef_fiyat + future_f/k + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
+    ortalama_hesap = ( fk_hedef_fiyat + future_fk + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
   #if operation == "ORTALAMA HEDEF FİYAT":
   #st.write(ortalama_hesap)
   #if ortalama_hesap < kapanıs :
