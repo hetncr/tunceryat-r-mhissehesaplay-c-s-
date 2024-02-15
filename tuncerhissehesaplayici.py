@@ -516,7 +516,7 @@ if hisse_adi:
    # st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
    # st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   
-  elif operation == "Birinci Çeyrek Bilançoya Göre Hisse Oranları":
+  elif operation == "Birinci Çeyrek Bilançosuna Göre Hisse Oranları":
     c7_3 = c7*4 ## Yılsonu Net Kar Tahmini
     c10_f = c7/c4
     c16_3 = c7_3 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
