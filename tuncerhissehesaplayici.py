@@ -319,7 +319,7 @@ if hisse_adi:
           if fk_value != "A/D":
             st.write(f"**:blue[HİSSE F/K ORANI:]**  {fk_value}") #, box = True)
           else:  
-            fk_value_1 = st.number_input("F/K Oranı Giriniz:")
+            fk_value_1 = st.number_input(f"**:blue[F/K Oranı Giriniz:]**")
             fk_value = float(fk_value_1)
           pd_value = hisse_oran[stock_name]["pd_dd"].replace(",", ".")
           if pd_value != "A/D":
