@@ -362,13 +362,13 @@ if hisse_adi:
 
   # Hisse F/K Oranı
   #c10 = float(st.number_input("Hisse F/K Oranı:"))
-  c10 = float(fk_value.replace(",", "."))
+  c10 = float(fk_value) #.replace(",", "."))
   #if c10 != "A/D":
   #  c10 = st.number_input("F/K Değeri Bulunmamaktadır. Lütfen F/K Değeri Giriniz")
 
   # HİSSE PD/DD ORANI
   #c11 = st.number_input("Hisse PD/DD Oranı: ")
-  c11 = float(pd_value.replace(",", "."))
+  c11 = float(pd_value) #.replace(",", "."))
 
   # BİST100 /SEKTÖR GÜNCEL F/K ORANI
   #c12 = float(st.number_input("BİST100 / Sektör Güncel F/K Oranı: "))
