@@ -311,7 +311,7 @@ if hisse_adi:
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)
           st.write(f"**HİSSE F/K ORANI:**  {fk_value}") #, box = True)
           st.write(f"**HİSSE PD/DD ORANI:**  {pd_value}") #, box = True)
-                  #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
+          #print(f"{stock_name} Hisse Fiyatı: {kapanıs}")
           #print(f"{stock_name} F/K Oranı:  {fk_value}")
           #print(f"{stock_name} PD/DD Oranı:  {pd_value}")
           st.subheader(f"**Bilanço Verileri:**", divider='grey')
@@ -373,13 +373,13 @@ if hisse_adi:
 
   # Ödenmiş Sermaye
   ##c4 = st.number_input("Ödenmiş Sermaye: ")
-  #c4 = float(OdenmisSermaye1) #Otomatik Veri İşlem İçin Bu Satır
+  c4 = float(OdenmisSermaye1) #Otomatik Veri İşlem İçin Bu Satır
   ###c4 = ("{float(OdenmisSermaye):,.2f}")
   ####c4 = float(OdenmisSermaye.replace(",", "."))
 
   # Yıllık Net Kar
   ##c7 = st.number_input("Yıllık Net Kar: ")
-  #c7 = float(NetDonemKarı1) #Otomatik Veri İşlem İçin Bu Satır
+  c7 = float(NetDonemKarı1) #Otomatik Veri İşlem İçin Bu Satır
   ###c7 = ("{float(NetDonemKarı1):,.2f}")
   ###c7 = float(NetDonemKarı1.replace(",", "."))
   #c15 = c7*2
@@ -387,9 +387,13 @@ if hisse_adi:
 
   # Özsermaye
   ##c8 = st.number_input("Özsermaye : ")
-  #c8 = float(ozkaynaklar1) #Otomatik Veri İşlem İçin Bu Satır
+  c8 = float(ozkaynaklar1) #Otomatik Veri İşlem İçin Bu Satır
   ###c8 = (f"{float(ozkaynaklar1):,.2f}")
   ###c8 = float(ozkaynaklar1.replace(",", "."))
+
+  #EPS ve YILSONU F/K TAHMİNİ 
+  c16 = c7/c4 # EPS (Hisse Başı Kazanç)
+  c17 = c3/c16  
 
 
   # Güncel Piyasa Değeri
@@ -439,21 +443,27 @@ if hisse_adi:
   #st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
 
     # Özsermaye
-  c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
+##  c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
 
     # Ödenmiş Sermaye
-  c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
+##  c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
 
     # Yıllık Net Kar
-  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
+##  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
   #with st.sidebar:
-    
+
   operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "F/K HEDEF FİYAT", "PD/DD HEDEF FİYAT", "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT", "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT", "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
     st.write(f"İŞLEM SEÇİN")
     #st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
 
+  elif operation == "Gelecek F/K Oranına Göre Olması Gereken Fiyat":
+    if c17 != 0:
+      future_fk = (c3/c17)*c12
+    else:
+      future_fk = 0
+    st.write(f":blue[**Gelecek F/K Hedef Fiyat:**] {future_fk:,.2f}")
   elif operation == "F/K HEDEF FİYAT":
     if c10 != 0:
       fk_hedef_fiyat = c3 / c10 * c12
