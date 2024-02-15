@@ -477,45 +477,6 @@ if hisse_adi:
     st.write(f"İŞLEM SEÇİN")
     #st.write(f":red[Aşağıdaki kırmızı uyarı yazısı veriler girilmediği için çıkmaktadır. Lütfen verileri girip yapmak istediğiniz işlemi seçin.]")
 
-  #elif operation == "Gelecek F/K Oranına Göre Olması Gereken Fiyat":
-    #if c17 != 0:
-     # future_fk = (c3/c17)*c12
-    #else:
-     # future_fk = 0
-    #st.write(f":blue[**Gelecek F/K Hedef Fiyat:**] {future_fk:,.2f}")
-  #elif operation == "F/K HEDEF FİYAT":
-   # if c10 != 0:
-    #  fk_hedef_fiyat = c3 / c10 * c12
-    #else:
-     # fk_hedef_fiyat = 0
-    #st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
-    #st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-
-  #elif operation == "PD/DD HEDEF FİYAT":
-   # if c11 != 0:
-    #  pd_hedef_fiyat = c3 / c11 * c13
-    #else:
-     # pd_hedef_fiyat = 0
-    #st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
-    #st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-
-  #elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
-   # if c4 != 0:
-    #  odenmis_hedef_fiyat = (c7 / c4) * c10
-    #else:
-      #odenmis_hedef_fiyat = 0
-     # st.write(f":blue[ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:] {odenmis_hedef_fiyat:,.2f}")
-     # st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-  #elif operation == "ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT":
-    #st.write(f"ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT: {odenmis_hedef_fiyat:,.2f}")
-    #  st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
-  #elif operation == "ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT":
-    #if c10 != 0:
-   # ozsermaye_hf = (c7/c8)*10/c11*c3
-   # st.write(f":blue[ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT]: {ozsermaye_hf:,.2f}")
-   # st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-   # st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
-  
   elif operation == "1. Çeyrek Bilançosuna Göre Hisse Oranları":
     c7_1 = c7*4 ## Yılsonu Net Kar Tahmini
     c10_f = c7/c4
@@ -629,19 +590,19 @@ if hisse_adi:
    
   
   
-  elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
-    c21 = (c7*7)+(c8*0.5)
-    potansiyel_fiyat = c21/c4
-    st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat:,.2f}")
-    #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
+  ##elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
+  ##  c21 = (c7*7)+(c8*0.5)
+  ##  potansiyel_fiyat = c21/c4
+  ##  st.write(f":blue[**POTANSİYEL DEĞERİNE GÖRE HİSSE FİYATI:**] {potansiyel_fiyat:,.2f}")
+  ##  #st.write(f":red[Not: Hisse verilerini kontrol ediniz. Eksik veri nedeniyle altta kırmızı alanda hata mesajı çıkmaktadır]")
   #operation = st.selectbox("[ORTALAMA HEDEF FİYAT]")
-    fk_hedef_fiyat = c3 / c10 * c12
-    pd_hedef_fiyat = c3 / c11 * c13
-    ozsermaye_hf = (c7/c8)*10/c11*c3
-    odenmis_hedef_fiyat = (c7 / c4) * c10
-    c21 = (c7*7)+(c8*0.5)
-    potansiyel_fiyat = c21/c4
-    ortalama_hesap = ( fk_hedef_fiyat + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
+  ##  fk_hedef_fiyat = c3 / c10 * c12
+  ##  pd_hedef_fiyat = c3 / c11 * c13
+  ##  ozsermaye_hf = (c7/c8)*10/c11*c3
+  ##  odenmis_hedef_fiyat = (c7 / c4) * c10
+  ##  c21 = (c7*7)+(c8*0.5)
+  ##  potansiyel_fiyat = c21/c4
+  ##  ortalama_hesap = ( fk_hedef_fiyat + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
   #if operation == "ORTALAMA HEDEF FİYAT":
   #st.write(ortalama_hesap)
   #if ortalama_hesap < kapanıs :
@@ -649,12 +610,12 @@ if hisse_adi:
   #else :
     #st.write(f"**TÜM HESAPLAMALARIN ORTALAMA FİYATI:** :green[{ortalama_hesap:,.2f}]")
   #elif operation == "TÜM HESAPLAMALARIN SONUÇLARINI GÖSTER":
-    st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
-    st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
-    st.write(f":blue[**ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:**] {odenmis_hedef_fiyat:,.2f}")
-    st.write(f":blue[**ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT**]: {ozsermaye_hf:,.2f}")
-    st.write(f":chart:**:blue[TÜM HESAPLAMALARIN ORTALAMA FİYATI:]** {ortalama_hesap:,.2f}")
-    st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
+  ##  st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
+  ##  st.write(f":blue[**PD/DD HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
+  ##  st.write(f":blue[**ÖDENMİŞ SERMAYEYE GÖRE HEDEF FİYAT:**] {odenmis_hedef_fiyat:,.2f}")
+  ##  st.write(f":blue[**ÖZSERMAYE KARLILIĞINA GÖRE HEDEF FİYAT**]: {ozsermaye_hf:,.2f}")
+  ##  st.write(f":chart:**:blue[TÜM HESAPLAMALARIN ORTALAMA FİYATI:]** {ortalama_hesap:,.2f}")
+  ##  st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
    
 
 else:
