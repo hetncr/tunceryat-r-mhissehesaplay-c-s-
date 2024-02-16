@@ -112,7 +112,7 @@ if hisse_adi:
       NetDonemKarı = veri[veri['itemDescTr'] == 'DÖNEM KARI (ZARARI)']
       NetDonemKarı_4 = float(NetDonemKarı.iloc[0,4].replace(",","."))
 
-      guncel_bilanco = (donemler[0], yıllar[0])
+      guncel_bilanco = ("period1", "year1")
       st.write(f"**(Güncel Bilanço Dönemi: {guncel_bilanco}")
       #print("Özkaynaklar:", ozkaynaklar1)
       #print("Ödenmiş Sermaye:", OdenmisSermaye)
