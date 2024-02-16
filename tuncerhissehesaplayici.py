@@ -114,8 +114,8 @@ if hisse_adi:
 
       #g_donemler = float(donemler.iloc[0])
       #g_yıllar = float(yıllar.iloc[0])   
-      g_tarihler = float(tarihler.iloc[0])
-      st.write(f"**(Güncel Bilanço Dönemi: {g_tarihler}**")
+      #g_tarihler = float(tarihler.iloc[0])
+      #st.write(f"**(Güncel Bilanço Dönemi: {g_tarihler}**")
       #print("Özkaynaklar:", ozkaynaklar1)
       #print("Ödenmiş Sermaye:", OdenmisSermaye)
       ###print(f"Özkaynaklar: {float(ozkaynaklar1):,.2f}") # comma and dot separators
