@@ -320,7 +320,7 @@ if hisse_adi:
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs        
           kapanıs = float(kapanıs.replace(",",""))
           if kapanıs > 999:
-            c3 = st.number_input("Enter Hisse Fiyatı:", value=kapanıs_int)  # Display input box
+            c3 = st.number_input("Enter Hisse Fiyatı:", )  # Display input box
           else:
             c3 = kapanıs
           st.write(f"Hisse Fiyatı: {kapanıs}")
