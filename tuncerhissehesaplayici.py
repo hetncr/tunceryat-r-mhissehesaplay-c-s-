@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs
-          kapanıs = int(kapanıs.replace(",", ""))  # Replace commas with periods
+          kapanıs = int(kapanıs.replace(",", "."))  # Replace commas with periods
 # Optional formatting with thousands separators and two decimal places
           ##kapanıs = f"{kapanıs:,.2f}"
           st.write(f"Hisse Fiyatı: {kapanıs}")
