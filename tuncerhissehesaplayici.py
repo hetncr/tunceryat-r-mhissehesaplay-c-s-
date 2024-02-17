@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs 
-          kapanıs = float(kapanıs.replace(",","."))
+          kapanıs = float(kapanıs.replace(",",""))
           #kapanıs = f"{kapanıs:,.2f}"
           ##if kapanıs < 999:
           ##kapanıs = float(kapanıs.replace(",","").replace(",",""))
