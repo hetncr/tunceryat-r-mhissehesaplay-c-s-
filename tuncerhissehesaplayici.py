@@ -320,7 +320,7 @@ if hisse_adi:
           kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
           if kapanıs <= 999:      
             st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
-          else
+          else:
             kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
           if fk_value != "A/D":
