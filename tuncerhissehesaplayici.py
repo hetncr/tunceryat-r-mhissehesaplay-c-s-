@@ -317,17 +317,10 @@ if hisse_adi:
   if stock_name in hisse_oran:
       try:
           # Access the stock data and extract the F/K value
-          kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs        
-          kapanıs = float(kapanıs.replace(",","").replace(",",""))
-          if kapanıs > 999:
-            c3 = st.number_input("Enter Hisse Fiyatı:", )  # Display input box
-          else:
-            c3 = kapanıs
-          st.write(f"Hisse Fiyatı: {kapanıs}")
-          ##kapanıs = f"{kapanıs:,.2f}"
-          ##st.write(f"Hisse Fiyatı: {kapanıs}")
-          ##kapanıs = float(kapanıs)
-          #st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
+          kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs 
+          kapanıs = int(kapanıs.replace(",",""))
+          ##kapanıs = float(kapanıs.replace(",","").replace(",",""))
+          st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
           #else:
             #kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
