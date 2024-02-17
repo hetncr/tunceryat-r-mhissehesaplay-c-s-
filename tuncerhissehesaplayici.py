@@ -320,10 +320,11 @@ if hisse_adi:
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs 
           kapanıs = float(kapanıs.replace(",","."))
           kapanıs = f"{kapanıs:,.2f}"
+          if kapanıs < 999:
           ##kapanıs = float(kapanıs.replace(",","").replace(",",""))
-          st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
-          #else:
-            #kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
+            st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
+          else:        
+            kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
           if fk_value != "A/D":
             st.write(f"**:blue[HİSSE F/K ORANI:]**  {fk_value}") #, box = True)
