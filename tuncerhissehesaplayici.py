@@ -366,6 +366,10 @@ if hisse_adi:
   # Hisse Fiyatı
   #c3 = st.number_input("Hisse Fiyatı:" )
   c3 = float(kapanıs)
+  if c3 == float:
+    c3 = float(kapanıs)
+  else:
+    c3 = st.number_input("Hisse Fiyatı:" )
   ##kapanıs_1 = float(kapanıs.replace(",", "."))
   ##c3 = float({kapanıs_1:,.2f})
   ###c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
