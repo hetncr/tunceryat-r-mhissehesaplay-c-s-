@@ -319,7 +319,7 @@ if hisse_adi:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs 
           kapanıs = float(kapanıs.replace(",","."))
-          kapanıs = f"{kapanıs:,.2f}"
+          #kapanıs = f"{kapanıs:,.2f}"
           if kapanıs < 999:
           ##kapanıs = float(kapanıs.replace(",","").replace(",",""))
             st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
