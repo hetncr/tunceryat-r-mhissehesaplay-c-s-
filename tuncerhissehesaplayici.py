@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs 
-          kapanıs = float(kapanıs.replace(",",","))
+          #kapanıs = float(kapanıs.replace(",",","))
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
           ##else:        
           ##kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
@@ -368,7 +368,7 @@ if hisse_adi:
   #piyasa_degeri = kapanıs*OdenmisSermaye1
   #kapanıs = piyasa_degeri/OdenmisSermaye1
   c3 = float(kapanıs.replace(",","."))
-  c3 = float(c3.replace(",",""))
+  #c3 = float(c3.replace(",",""))
   ##kapanıs_1 = float(kapanıs.replace(",", "."))
   ##c3 = float({kapanıs_1:,.2f})
   ###c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
