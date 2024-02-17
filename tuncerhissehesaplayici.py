@@ -317,7 +317,8 @@ if hisse_adi:
   if stock_name in hisse_oran:
       try:
           # Access the stock data and extract the F/K value
-          kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
+          kapanıs_1 = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
+          kapanıs = float(kapanıs_1)
           if kapanıs <= 999:      
             st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
           else:
