@@ -366,7 +366,7 @@ if hisse_adi:
   # Hisse Fiyatı
   #c3 = st.number_input("Hisse Fiyatı:" )
   c3 = float(kapanıs)
-  if c3 == float:
+  if c3 == "float":
     c3 = float(kapanıs)
   else:
     c3 = st.number_input("Hisse Fiyatı:" )
