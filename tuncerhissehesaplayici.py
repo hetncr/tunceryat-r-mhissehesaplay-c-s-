@@ -368,8 +368,8 @@ if hisse_adi:
   # Hisse Fiyatı
   #c3 = st.number_input("Hisse Fiyatı:" )
   ##c3 = float(kapanıs).replace(",", "."))
-  piyasa_degeri = kapanıs*OdenmisSermaye1
-  kapanıs = piyasa_degeri/OdenmisSermaye1
+  #piyasa_degeri = kapanıs*OdenmisSermaye1
+  #kapanıs = piyasa_degeri/OdenmisSermaye1
   c3 = float(kapanıs)
   ##kapanıs_1 = float(kapanıs.replace(",", "."))
   ##c3 = float({kapanıs_1:,.2f})
