@@ -263,8 +263,7 @@ if hisse_adi:
   for r in f_oranlar.find_all("tr"):
       hucre = r.find_all("td")
       hisse_adi_1 = hucre[0].find("a").text.upper()
-      kapanıs_1 = hucre[1].text
-      kapanıs = float(kapanıs_1.replace(",", "."))
+      kapanıs = hucre[1].text      
       #c3 = float(kapanıs)
       f_k = hucre[2].text
       #c10 = float(fk_value)
