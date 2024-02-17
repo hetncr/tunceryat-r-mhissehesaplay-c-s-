@@ -318,9 +318,11 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs
-          kapanıs = kapanıs.replace(",", ".")  # Replace commas with periods
-          kapanıs = kapanıs.split(".")[0] + "." + kapanıs.split(".")[1][:2]  # Keep first two decimals
-          kapanıs = float(kapanıs)
+          kapanıs = float(kapanıs.replace(",", ""))  # Replace commas with periods
+# Optional formatting with thousands separators and two decimal places
+          kapanıs = f"{kapanıs:,.2f}"
+          st.write(f"Hisse Fiyatı: {kapanıs}")
+          ##kapanıs = float(kapanıs)
           ##kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
           #kapanıs = float(kapanıs_1) ##.replace(",", ".")
           #if kapanıs <= 0:      
