@@ -387,8 +387,7 @@ if hisse_adi:
   c4 = float(OdenmisSermaye1) #Otomatik Veri İşlem İçin Bu Satır
   c4_2 = float(OdenmisSermaye_2) #Otomatik Veri İşlem İçin Bu Satır
   c4_3 = float(OdenmisSermaye_3) #Otomatik Veri İşlem İçin Bu Satır
-  c4_4 = float(OdenmisSermaye_4) #Otomatik Veri İşlem İçin Bu Satır
-  
+  c4_4 = float(OdenmisSermaye_4) #Otomatik Veri İşlem İçin Bu Satır  
   ###c4 = ("{float(OdenmisSermaye):,.2f}")
   ####c4 = float(OdenmisSermaye.replace(",", "."))
 
@@ -398,7 +397,7 @@ if hisse_adi:
   c7_2 = float(NetDonemKarı_2)
   c7_3 = float(NetDonemKarı_3)
   c7_4 = float(NetDonemKarı_4)
-    ###c7 = ("{float(NetDonemKarı1):,.2f}")
+  ###c7 = ("{float(NetDonemKarı1):,.2f}")
   ###c7 = float(NetDonemKarı1.replace(",", "."))
   #c15 = c7*2
   #st.write(c15)
@@ -419,63 +418,7 @@ if hisse_adi:
   #st.write("**HİSSE HEDEF FİYAT HESAPLAYICI**")
   st.subheader(":two:**HİSSE HEDEF FİYAT HESAPLAYICI**", divider='rainbow')
 
-  #operation = st.selectbox("İşlem Seçimi:", ["F/K Hedef Fiyat", "P/D Hedef Fiyat"])
-
-  # Calculate the target price based on the selected operation
-  #if operation == "F/K Hedef Fiyat":
-  #  if c10 != 0:
-  #    fk_hedef_fiyat = c3 / c10 * c12
-  #  else:
-  #    fk_hedef_fiyat = 0
-
-  #elif operation == "P/D Hedef Fiyat":
-  #  if c11 != 0:
-  #    pd_hedef_fiyat = c3 / c11 * c13
-  #  else:
-  #    pd_hedef_fiyat = 0
-
-  # F/K HEDEF FİYAT VE PD/DD HEDEF FİYAT İŞLEM HESAPLAMALARI
-  #if operation == "F/K Hedef Fiyat":
-  #  st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
-  #  st.write(f"    :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-
-  #elif operation == "P/D Hedef Fiyat":
-  #  st.write(f":blue[**P/D HEDEF FİYAT:**] {pd_hedef_fiyat:,.2f}")
-  #  st.write(f"    :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")
-  st.write()
-  st.write()
-  st.write()
-
-  #st.write("Not: Ödenmiş Sermaye, Özsermaye Karlılığı ve Potansiyel Karlılık Hedef Fiyat Hesaplamaları İçin Aşağıdaki Bölümü Kullanın:arrow_down:")
-  # MANUEL VERİ GİRİŞİ İLE HEDEF FİYAT HESAPLAMA
-
-  #st.subheader(f":two:** HİSSE HESAPLAMA BÖLÜMÜ**", divider='rainbow')
-
-  #st.write(f"**ÖZKAYNAKLAR:**  {float(ozkaynaklar1):,.0f}") #", box = True)  
-  #st.write(f"**ÖDENMİŞ SERMAYE:**  {float(OdenmisSermaye1):,.0f}") #, box = True)
-  #st.write(f"**NET DÖNEM KARI:**  {float(NetDonemKarı1):,.0f}")
-  
-  #st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
-  #st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
-
-    # Özsermaye
-##  c8 = st.number_input(f"**Özkaynaklar (Özsermaye):**", value=None, placeholder="Özkaynaklar (Özsermaye) tutarını bu alana yazın") #{float(ozkaynaklar1):,.0f}")
-
-    # Ödenmiş Sermaye
-##  c4 = st.number_input("**Ödenmiş Sermaye:**", value=None, placeholder="Ödenmiş Sermaye tutarını bu alana yazın")
-
-    # Yıllık Net Kar
-##  c7 = st.number_input("**Yıllık Net Kar:**", value=None, placeholder="Yıllık Net Kar tutarını bu alana yazın")
-  #with st.sidebar:
-
-###Geçmiş Dönem Bilanço Verileri
-###       st.write(f"**ÖZKAYNAKLAR(Bir Önceki Çeyrek):**  {float(ozkaynaklar_3):,.0f}")
-###       st.write(f"**NET DÖNEM KARI(Bir Önceki Çeyrek):**  {float(NetDonemKarı_3):,.0f}")
-###       st.write(f"**ÖZKAYNAKLAR(Geçmiş Yıl ):**  {float(ozkaynaklar_2):,.0f}") #", box = True)
-###       st.write(f"**ÖDENMİŞ SERMAYE(Geçmiş Yıl):**  {float(OdenmisSermaye_2):,.0f}") #, box = True)
-###       st.write(f"**NET DÖNEM KARI(Geçmiş Yıl):**  {float(NetDonemKarı_2):,.0f}") #, box = True)
-
-  operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "1. Çeyrek Bilanço Hisse Oranları-3 Aylık", "2. Çeyrek Bilanço Hisse Oranları-6 Aylık", "3. Çeyrek Bilanço Hisse Oranları-9 Aylık", "4. Çeyrek Bilanço Hisse Oranları-12 Aylık"])
+  operation = st.selectbox(":blue[**HİSSE FİYAT HESAPLAMARI İÇİN İŞLEM SEÇİN:**]", ["İŞLEM SEÇİN", "GÜNCEL BİLANÇOYA GÖRE HİSSE FİYATI", "BİR ÇEYREK SONRAKİ HEDEF FİYATI TAHMİNİ", "1 YIL SONRAKİ HİSSE HEDEF FİYATI TAHMİNİ", "1. Çeyrek Bilanço Hisse Oranları-3 Aylık", "2. Çeyrek Bilanço Hisse Oranları-6 Aylık", "3. Çeyrek Bilanço Hisse Oranları-9 Aylık", "4. Çeyrek Bilanço Hisse Oranları-12 Aylık"])
   #if operation == "Tüm Hedef Fiyatları Göster":
   if operation == "İŞLEM SEÇİN":
     st.write(f"İŞLEM SEÇİN")
@@ -504,17 +447,18 @@ if hisse_adi:
     st.write(f" :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}")    
 
 elif operation == "BİR ÇEYREK SONRAKİ HEDEF FİYATI TAHMİNİ":  
+    c7_y = c7+(c7-c7_2)
     #c7_3 = c7+c6 ## Yılsonu Net Kar Tahmini
-    c16_4 = c7 / c4 ## Yılsonu EPS(Hisse Başı Kazanç) Tahmini
+    c16_4 = c7_y / c4 ## EPS(Hisse Başı Kazanç) Tahmini
     #c16 =  c7 / c4     ## EPS(Hisse Başı Kazanç)
     c17 = c3 / c16_4 ## Yılsonu F/K Oranı Tahmini
-    c21 = (c7*7)+(c8*0.5)
+    c21 = (c7_y*7)+(c8*0.5)
     potansiyel_fiyat = c21/c4
     future_fk = (c3/c17)*c12
     fk_hedef_fiyat = c3 / c10 * c12
     pd_hedef_fiyat = c3 / c11 * c13
-    ozsermaye_hf = (c7/c8)*10/c11*c3 ##Yılsonu Tahmini Özsermaye Karlılığına Göre Hedef Fiyat
-    odenmis_hedef_fiyat = (c7 / c4) * c10
+    ozsermaye_hf = (c7_y/c8)*10/c11*c3 ##Yılsonu Tahmini Özsermaye Karlılığına Göre Hedef Fiyat
+    odenmis_hedef_fiyat = (c7_y / c4) * c10
     ortalama_hesap = ( fk_hedef_fiyat + future_fk + pd_hedef_fiyat + odenmis_hedef_fiyat + ozsermaye_hf + potansiyel_fiyat ) / 5
     st.write(f":blue[**Potansiyel Piyasa Değerine Göre Olması Gereken Fiyat:**] { potansiyel_fiyat :,.2f}")    
     st.write(f":blue[**F/K HEDEF FİYAT:**] {fk_hedef_fiyat:,.2f}")
