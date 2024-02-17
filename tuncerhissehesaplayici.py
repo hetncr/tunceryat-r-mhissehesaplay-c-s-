@@ -322,7 +322,7 @@ if hisse_adi:
           kapanıs = float(kapanıs)
           # Optional: Format with commas for display
           formatted_kapanıs = f"{kapanıs:,.2f}"
-          st.write(f"Hisse Fiyatı: {formatted_kapanıs
+          st.write(f"Hisse Fiyatı: {formatted_kapanıs}")
           ##kapanıs = f"{kapanıs:,.2f}"
           ##st.write(f"Hisse Fiyatı: {kapanıs}")
           ##kapanıs = float(kapanıs)
