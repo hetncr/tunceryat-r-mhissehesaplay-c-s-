@@ -318,15 +318,15 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs
-          kapanıs = int(kapanıs.replace(",", "."))  # Replace commas with periods
-# Optional formatting with thousands separators and two decimal places
+          kapanıs = kapanıs.split(".")[0] + "." + kapanıs.split(".")[1][:2]  # Keep first two decimals
+          kapanıs = float(kapanıs)
+          # Optional: Format with commas for display
+          formatted_kapanıs = f"{kapanıs:,.2f}"
+          st.write(f"Hisse Fiyatı: {formatted_kapanıs
           ##kapanıs = f"{kapanıs:,.2f}"
-          st.write(f"Hisse Fiyatı: {kapanıs}")
+          ##st.write(f"Hisse Fiyatı: {kapanıs}")
           ##kapanıs = float(kapanıs)
-          ##kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
-          #kapanıs = float(kapanıs_1) ##.replace(",", ".")
-          #if kapanıs <= 0:      
-          st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
+          #st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
           #else:
             #kapanıs = st.number_input(f"**:blue[HİSSE FİYATINA ULAŞILAMAMIŞTIR. LÜTFEN HİSSE FİYATI GİRİNİZ:]**")
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
