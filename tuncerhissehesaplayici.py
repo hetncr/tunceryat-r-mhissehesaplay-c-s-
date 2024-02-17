@@ -264,7 +264,7 @@ if hisse_adi:
       hucre = r.find_all("td")
       hisse_adi_1 = hucre[0].find("a").text.upper()
       kapanıs_1 = hucre[1].text
-      kapanıs = float(kapanıs_1)
+      kapanıs = float(kapanıs_1.replace(",", "."))
       #c3 = float(kapanıs)
       f_k = hucre[2].text
       #c10 = float(fk_value)
