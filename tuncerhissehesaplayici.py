@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"] ##.replace(",", ".")  
-          st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  float(kapanıs):,.2f}) ##{kapanıs}") #, box = True)     
+          st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {float(kapanıs):,.2f}) ##{kapanıs}") #, box = True)     
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
           if fk_value != "A/D":
             st.write(f"**:blue[HİSSE F/K ORANI:]**  {fk_value}") #, box = True)
