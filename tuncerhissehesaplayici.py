@@ -318,7 +318,8 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs
-          kapanıs = kapanıs.replace(",", "").replace(",",",")          # Replace commas with periods
+          kapanıs = kapanıs.replace(",", ".")  # Replace commas with periods
+          kapanıs = kapanıs.split(".")[0] + "." + kapanıs.split(".")[1][:2]  # Keep first two decimals
           kapanıs = float(kapanıs)
           ##kapanıs = hisse_oran[stock_name]["kapanıs"].replace(",", ".")
           #kapanıs = float(kapanıs_1) ##.replace(",", ".")
