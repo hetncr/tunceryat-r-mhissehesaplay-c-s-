@@ -365,9 +365,10 @@ if hisse_adi:
 
   # Hisse Fiyatı
   #c3 = st.number_input("Hisse Fiyatı:" )
-  c3 = float(kapanıs)
-  if c3 == "float":
-    c3 = float(kapanıs)
+  c3 = float(kapanıs.replace(",", "."))
+  #c3 = float(kapanıs)
+  if c3 <= 999:
+    c3 = float(kapanıs.replace(",", "."))
   else:
     c3 = st.number_input("Hisse Fiyatı:" )
   ##kapanıs_1 = float(kapanıs.replace(",", "."))
