@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs        
-          kapanıs = float(kapanıs.replace(",","."))
+          kapanıs = float(kapanıs.replace(".",","))
           if kapanıs > 999:
             c3 = st.number_input("Enter Hisse Fiyatı:", value=kapanıs_int)  # Display input box
           else:
