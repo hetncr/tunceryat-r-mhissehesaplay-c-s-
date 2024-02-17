@@ -317,12 +317,13 @@ if hisse_adi:
   if stock_name in hisse_oran:
       try:
           # Access the stock data and extract the F/K value
-          kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs
-          kapanıs = kapanıs.split(".")[0] + "." + kapanıs.split(".")[1][:2]  # Keep first two decimals
+          kapanıs = hisse_oran[stock_name]["kapanıs"]  # Extract kapanıs        
           kapanıs = float(kapanıs)
-          # Optional: Format with commas for display
-          formatted_kapanıs = f"{kapanıs:,.2f}"
-          st.write(f"Hisse Fiyatı: {formatted_kapanıs}")
+          if kapanıs_int > 999:
+            c3 = st.number_input("Enter Hisse Fiyatı:", value=kapanıs_int)  # Display input box
+          else:
+            c3 = kapanıs
+          st.write(f"Hisse Fiyatı: {kapanıs}")
           ##kapanıs = f"{kapanıs:,.2f}"
           ##st.write(f"Hisse Fiyatı: {kapanıs}")
           ##kapanıs = float(kapanıs)
