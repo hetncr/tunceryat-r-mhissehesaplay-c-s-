@@ -318,7 +318,7 @@ if hisse_adi:
       try:
           # Access the stock data and extract the F/K value
           kapanıs = hisse_oran[stock_name]["kapanıs"] ##.replace(",", ".")
-          kapanıs = float(kapanıs)
+          kapanıs_1 = float(kapanıs)
           st.write(f"   :chart:**:blue[HİSSE FİYATI:]**  {kapanıs}") #, box = True)     
           fk_value = hisse_oran[stock_name]["f_k"].replace(",", ".")  # Format with dots as decimal separators
           if fk_value != "A/D":
@@ -362,7 +362,7 @@ if hisse_adi:
 
   # Hisse Fiyatı
   #c3 = st.number_input("Hisse Fiyatı:" )
-  c3 = float(kapanıs)
+  c3 = float(kapanıs_1)
   #c3 = float(kapanıs.replace(",", "."))  # Replace comma with dot
 
   # Hisse F/K Oranı
