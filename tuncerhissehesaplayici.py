@@ -368,6 +368,7 @@ if hisse_adi:
   #piyasa_degeri = kapanıs*OdenmisSermaye1
   #kapanıs = piyasa_degeri/OdenmisSermaye1
   c3 = float(kapanıs.replace(".",""))
+  c3 = c3/100
   #c3 = float(c3.replace(",",""))
   ##kapanıs_1 = float(kapanıs.replace(",", "."))
   ##c3 = float({kapanıs_1:,.2f})
