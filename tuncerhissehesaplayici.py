@@ -137,6 +137,14 @@ if hisse_adi:
   
   tdv = "https://tr.tradingview.com/symbols/BIST-"+hisse_adi
   isyatırım ="https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/sirket-karti.aspx?hisse="+hisse_adi
+  col1, col2, col3 = st.columns([1,1])
+  with col1:
+    st.link_button("İş Yatırım",isyatırım) #st.button('1')
+  with col2:
+    st.link_button("Tradingview", tdv) #st.button('2')
+  #with col3:
+    #st.button('3')
+  
   st.write(" İş Yatırım Sayfası İçin Tıklayın: ") #[link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
   st.link_button("İş Yatırım",isyatırım)
   st.write(" Tradingview Grafik Sayfası İçin Tıklayın: ")  #[link](tdv))  
