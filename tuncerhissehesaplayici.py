@@ -136,6 +136,7 @@ if hisse_adi:
   tdv = "https://tr.tradingview.com/symbols/BIST-"+hisse_adi
   st.write(" İş Yatırım Sayfası İçin Tıklayın: [link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
   st.write(" Tradingview Grafik Sayfası İçin Tıklayın: "(tdv))
+  st.write(tdv)
   #(https://tr.tradingview.com/symbols/BIST-hisse_input)")  
   ##(https://tr.tradingview.com/chart/)")
   
