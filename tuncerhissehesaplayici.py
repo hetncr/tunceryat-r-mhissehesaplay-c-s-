@@ -137,7 +137,7 @@ if hisse_adi:
   
   tdv = "https://tr.tradingview.com/symbols/BIST-"+hisse_adi
   isyatırım ="https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/sirket-karti.aspx?hisse="+hisse_adi
-  col1, col2 = st.columns([1,1])
+  col1, col2 = st.columns([1,1,1,1])
   with col1:
     st.link_button("İş Yatırım",isyatırım) #st.button('1')
   with col2:
