@@ -137,7 +137,7 @@ if hisse_adi:
   isyatırım ="https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/sirket-karti.aspx?hisse="+hisse_adi
   #st.write(" İş Yatırım Sayfası İçin Tıklayın: ") #[link](https://www.isyatirim.com.tr/tr-tr/analiz/hisse/Sayfalar/default.aspx)")
   st.link_button("İş Yatırım",isyatırım)
-  st.link_button("Tradingview", tdv)
+  #st.link_button("Tradingview", tdv)
   #st.write(isyatırım)
   #st.write(" Tradingview Grafik Sayfası İçin Tıklayın: ")  #[link](tdv))  
   #st.write(tdv)
