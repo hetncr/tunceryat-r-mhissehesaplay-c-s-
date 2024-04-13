@@ -657,7 +657,7 @@ if hisse_adi:
    
 
 else:
-  st.write(":arrow_up:","Lütfen Yukarıdaki Alana Hisse Yazınız",":arrow_up:")
+  st.write(":arrow_up:","Lütfen Yukarıdaki Alana Yazınız",":arrow_up:")
   st.write("(Not: Bankalar ve Faktöring Şirketleri Dahil Değildir)")
 
 
